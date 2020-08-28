@@ -5,8 +5,7 @@ const convert = function (number, base) {
 };
 
 const isValid = function (number, base) {
-  console.log(number, base, number % 10 < base);
-  return number % 10 < base;
+  return parseInt(number.slice(-1), base) ? true : false;
 };
 
 class Base extends React.Component {
@@ -16,7 +15,7 @@ class Base extends React.Component {
   }
 
   handleChange(event) {
-    const value = +event.target.value;
+    const value = event.target.value;
     const number = isValid(value, this.props.base)
       ? parseInt(value, this.props.base)
       : this.props.number;
