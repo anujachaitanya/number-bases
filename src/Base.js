@@ -27,7 +27,7 @@ class Base extends React.Component {
   render() {
     return (
       <div>
-        <span>Base {this.props.base}</span>
+        <label>Base {this.props.base}</label>
         <input
           value={convert(this.props.number, this.props.base)}
           onChange={this.handleChange}
