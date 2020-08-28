@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import Base from './Base.js';
 
 class Bases extends React.Component {
